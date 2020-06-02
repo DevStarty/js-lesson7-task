@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .table {
+      width: 800px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      width: 100%;
+    }
+
+    .title-row__cell {
+      background: #999999;
+      flex-grow: 1;
+      width: 25%;
+    }
+
+    .rows-list {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .row {
+      display: flex;
+      height: 48px;
+      width: 100%;
+    }
+
+    .row__cell {
+      padding: 0 4px;
+      width: 25%;
+      height: 48px;
+      flex-shrink: 0;
+    }
+
+    .user-form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="search" type="search"></input>
+  <div class="table">
+    <div class="title-row">
+      <div class="title-row__cell">Name</div>
+      <div class="title-row__cell">Last name</div>
+      <div class="title-row__cell">Sex</div>
+      <div class="title-row__cell">BMI</div>
+    </div>
+    <div id="rows" class="rows-list">
+    </div>
+  </div>
+  <form id="user-form" class="user-form">
+    <label>
+      Name:
+      <input name="name" type="text" />
+    </label>
+    <label>
+      Last name:
+      <input name="lastName" type="text" />
+    </label>
+    <label>
+      Sex choice:
+      <input name="sex" type="radio" required="click" /> male
+      <input name="sex" type="radio" /> female
+    </label>
+    <label>
+      Show users:
+      <input name="sex" type="checkbox" placeholder="search male" /> male <input name="sex" type="checkbox"
+        placeholder="search female" />female
+
+    </label>
+    <label>
+      Height:
+      <input name="height" type="text" pattern="[0-9]*" />
+    </label>
+    <label>
+      Weight:
+      <input name="weight" type="text" pattern="[0-9]*" />
+    </label>
+    <button type="submit">
+      Add User
+    </button>
+  </form>
+  <script src="file:///C:/Users/Jarek/Desktop/html_kurs/kurs_html/task_19/js-lesson7-task.js"></script>
+</body>
+
+</html>
